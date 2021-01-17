@@ -276,7 +276,7 @@ Args:
 		Aggregation for the vectors, choose from ['mean', 'sum', 'min', 'max']
 	collection_name:
 		Name of Collection
-	search_field:
+	field:
 		Vector fields to search through
 	approx:
 		Used for approximate search
@@ -350,7 +350,7 @@ Args:
 		Aggregation for the vectors, choose from ['mean', 'sum', 'min', 'max']
 	collection_name:
 		Name of Collection
-	search_field:
+	field:
 		Vector fields to search through
 	approx:
 		Used for approximate search
@@ -428,7 +428,7 @@ Args:
 		Aggregation for the vectors, choose from ['mean', 'sum', 'min', 'max']
 	collection_name:
 		Name of Collection
-	search_field:
+	field:
 		Vector fields to search through
 	approx:
 		Used for approximate search
