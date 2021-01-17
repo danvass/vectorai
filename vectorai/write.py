@@ -477,7 +477,7 @@ class ViWriteClient(ViReadClient, ViWriteAPIClient, UtilsMixin):
             >>> from vectorai.models.deployed import ViText2Vec
             >>> text_encoder = ViText2Vec(username, api_key, vectorai_url)
             >>> documents = [{'chicken': 'Big chicken'}, {'chicken': 'small_chicken'}, {'chicken': 'cow'}]
-            >>> vi_client.insert_documents(documents, models={'chicken': text_encoder.encode})
+            >>> vi_client.insert_documents(collection_name, documents, models={'chicken': text_encoder.encode})
         """
         if collection_name not in self.list_collections():
             if len(models) == 0:
@@ -610,7 +610,7 @@ class ViWriteClient(ViReadClient, ViWriteAPIClient, UtilsMixin):
             >>> from vectorai.client import ViClient
             >>> vi_client = ViClient(username, api_key, vectorai_url)
             >>> documents_df = pd.DataFrame.from_records([{'chicken': 'Big chicken'}, {'chicken': 'small_chicken'}, {'chicken': 'cow'}])
-            >>> vi_client.edit_document(documents=documents_df, models={'chicken': text_encoder.encode})
+            >>> vi_client.edit_document(collection_name, documents=documents_df, models={'chicken': text_encoder.encode})
         """
         if "_id" not in edits.keys():
             raise ValueError("Missing _id in the document. Please include that field.")
